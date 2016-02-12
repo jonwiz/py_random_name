@@ -1,7 +1,5 @@
 import random
 
-
-
 consonants = 'bcdfghjklmnpqrst'
 vowels = 'aeiou'
 names = []
@@ -9,7 +7,6 @@ dupes = []
 
 tries = 1
 max_tries = 1000000
-
 
 
 
@@ -117,24 +114,9 @@ def randomNames(needle=None, gender='m', **args):
             else:
                 break
     
-        print('{} Tries!'.format(tries))
+        print('{} Tries to generate Needle {}!'.format(tries, needle))
         if(tries >= max_tries):
             print("Reached maximum attempts to generate {}".format(needle))
 
-    
-    
-        
-    
+ 
     return list(set(names))
-
-
-
-generate = randomNames(needle="Jon", nameCount=3, charLen=3)
-
-print(generate)
-
-#try to generate firstname tim
-print(randomFullName('m'))
-
-#try to generate firstname tim
-print(randomFullName('f'))
